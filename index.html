@@ -680,48 +680,69 @@
             Lo primero que necesitás saber: horarios, tipo de atención y cómo usar la guardia de forma segura.
           </p>
 
-          <h3 id="a-1-1">1.1 Horarios y sedes de guardia</h3>
-          <p>
-            Contamos con guardia médica destinada a resolver consultas de demanda espontánea sin turno previo.
-          </p>
-          <p>
-            Horarios habituales de guardia:
-          </p>
-          <ul>
-            <li><strong>Lunes a viernes:</strong> 07:00 a 20:00 hs</li>
-            <li><strong>Domingos:</strong> 16:00 a 20:00 hs</li>
-          </ul>
-          <p>
-            Los horarios pueden ajustarse según la operación del centro. La franja actualizada se muestra siempre en la parte superior de la página.
-          </p>
+          <!-- Horarios de guardia destacados -->
+          <div class="service-card" id="a-1-1" style="background: linear-gradient(135deg, #f0f4ff 0%, #e3ecff 100%); border: 2px solid var(--brand);">
+            <div style="display: flex; align-items: flex-start; gap: 16px;">
+              <div class="service-icon" style="margin-bottom: 0;">🏥</div>
+              <div style="flex: 1;">
+                <h4 style="margin-top: 4px;">Horarios de guardia</h4>
+                <p style="margin-bottom: 14px;">Guardia médica para demanda espontánea sin turno previo.</p>
+                
+                <ul class="schedule-list" style="background: white; padding: 14px; border-radius: 10px; margin: 0;">
+                  <li>
+                    <span><strong>Lunes a viernes:</strong></span>
+                    <span style="color: var(--brand); font-weight: 600;">07:00 a 20:00 hs</span>
+                  </li>
+                  <li>
+                    <span><strong>Domingos:</strong></span>
+                    <span style="color: var(--brand); font-weight: 600;">16:00 a 20:00 hs</span>
+                  </li>
+                </ul>
+                
+                <p style="margin: 12px 0 0; font-size: var(--fs-small); color: var(--muted);">
+                  ⚠️ Los horarios pueden ajustarse según la operación del centro. La franja actualizada se muestra siempre en la parte superior de la página.
+                </p>
+              </div>
+            </div>
+          </div>
 
-          <h3 id="a-1-2">1.2 ¿Qué es demanda espontánea?</h3>
-          <p>
-            La demanda espontánea se refiere a consultas que pueden resolverse acercándote directamente a la guardia, sin turno previo.
-          </p>
-          <p>
-            Ejemplos frecuentes:
-          </p>
-          <ul>
-            <li>Síntomas agudos pero estables (dolor leve o moderado, fiebre, malestar general).</li>
-            <li>Dudas sobre indicaciones o resultados recientes.</li>
-            <li>Solicitudes simples de evaluación clínica rápida.</li>
-          </ul>
-          <p>
-            Ante síntomas graves (dolor intenso en el pecho, dificultad para respirar marcada, pérdida de conciencia, etc.) se sugiere acudir al servicio de emergencias o al hospital más cercano.
-          </p>
+          <div class="service-grid">
+            <!-- Demanda espontánea -->
+            <div class="service-card" id="a-1-2">
+              <div class="service-icon">🩺</div>
+              <h4>¿Qué es demanda espontánea?</h4>
+              <p>Consultas que pueden resolverse acercándote directamente a la guardia, sin turno previo.</p>
+              
+              <ul class="service-features">
+                <li>Síntomas agudos pero estables</li>
+                <li>Dudas sobre indicaciones o resultados</li>
+                <li>Evaluación clínica rápida</li>
+              </ul>
 
-          <h3 id="a-1-3">1.3 Cuándo conviene sacar turno</h3>
-          <p>
-            Para controles, estudios programados o consultas con especialista, lo ideal es utilizar los canales de turno:
-          </p>
-          <ul>
-            <li>Turno online desde la plataforma de turnos.</li>
-            <li>Coordinación por WhatsApp con el equipo administrativo.</li>
-          </ul>
-          <p>
-            De esa forma se organiza mejor la atención y se evitan esperas innecesarias en guardia.
-          </p>
+              <div style="margin-top: 12px; padding: 10px; background: #fff3cd; border-left: 3px solid #ffc107; border-radius: 6px; font-size: var(--fs-small);">
+                <strong>⚠️ Síntomas graves:</strong> Ante dolor intenso en el pecho, dificultad para respirar marcada o pérdida de conciencia, acudir al servicio de emergencias.
+              </div>
+            </div>
+
+            <!-- Cuándo sacar turno -->
+            <div class="service-card" id="a-1-3">
+              <div class="service-icon">📅</div>
+              <h4>Cuándo conviene sacar turno</h4>
+              <p>Para controles, estudios programados o consultas con especialista, lo ideal es coordinar un turno.</p>
+              
+              <ul class="service-features">
+                <li>Controles médicos programados</li>
+                <li>Estudios por imágenes o laboratorio</li>
+                <li>Consultas con especialistas</li>
+              </ul>
+
+              <div class="service-cta">
+                <a href="turnos.html" class="btn btn-primary">
+                  Sacar turno online
+                </a>
+              </div>
+            </div>
+          </div>
         </section>
 
         <!-- 2. Estudios y especialidades -->
