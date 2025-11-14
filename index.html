@@ -260,6 +260,7 @@
       border-radius:var(--radius);
       padding:18px;
     }
+    main.content h1,
     h2{
       font-size:var(--fs-h2);
       color:var(--brand);
@@ -585,28 +586,32 @@
 
     /* ============ Anclas accesibles ============ */
     [id]{scroll-margin-top:calc(var(--headerH) + 10px)}
+    #inicio{scroll-margin-top:0 !important}
 
     /* ============ Botón “Arriba” ============ */
     .to-top{
       position:fixed;
-      right:12px;
-      bottom:12px;
-      z-index:40;
+      right:20px;
+      bottom:20px;
+      z-index:9999;
       display:inline-flex;
       align-items:center;
       justify-content:center;
-      width:var(--tap);
-      height:var(--tap);
+      width:56px;
+      height:56px;
       border-radius:999px;
       background:#0b3d91;
       color:#fff;
       border:1px solid #09316f;
-      box-shadow:0 6px 18px rgba(0,0,0,.15);
-      font-weight:700;
+      box-shadow:0 6px 18px rgba(0,0,0,.25);
+      font-size:24px;
       text-decoration:none;
+      transition:transform .2s ease, box-shadow .2s ease;
     }
     .to-top:hover{
       background:#072c6a;
+      transform:translateY(-2px);
+      box-shadow:0 8px 24px rgba(0,0,0,.35);
       text-decoration:none;
     }
     .to-top:focus-visible{
@@ -620,6 +625,7 @@
   </style>
 </head>
 <body>
+  <div id="inicio" style="position: absolute; top: 0;"></div>
 
   <header id="top">
     <div class="wrap">
@@ -738,7 +744,7 @@
 
         <!-- 1. Guardia médica -->
         <section id="a-1" aria-labelledby="h-1">
-          <h2 id="h-1">1. Guardia médica</h2>
+          <h1 id="h-1">1. Guardia médica</h1>
           <p class="meta">
             Lo primero que necesitás saber: horarios, tipo de atención y cómo usar la guardia de forma segura.
           </p>
@@ -810,7 +816,7 @@
 
         <!-- 2. Estudios y especialidades -->
         <section id="a-2" aria-labelledby="h-2">
-          <h2 id="h-2">2. Estudios y especialidades</h2>
+          <h1 id="h-2">2. Estudios y especialidades</h1>
           <p class="meta">
             Diagnóstico por imágenes, laboratorio y especialidades médicas, con resultados digitales y enfoque en el paciente.
           </p>
@@ -896,7 +902,7 @@
 
         <!-- 3. Cómo atenderte -->
         <section id="a-3" aria-labelledby="h-3">
-          <h2 id="h-3">3. Cómo atenderte</h2>
+          <h1 id="h-3">3. Cómo atenderte</h1>
           <p class="meta">
             Opciones de autogestión para sacar turnos, resolver dudas y acceder a resultados.
           </p>
@@ -972,7 +978,7 @@
 
         <!-- 4. Sedes y horarios -->
         <section id="a-4" aria-labelledby="h-4">
-          <h2 id="h-4">4. Sedes y horarios</h2>
+          <h1 id="h-4">4. Sedes y horarios</h1>
           <p class="meta">
             Dónde estamos y en qué horarios atendemos en cada sede.
           </p>
@@ -1086,7 +1092,7 @@
 
         <!-- 5. Coberturas -->
         <section id="a-5" aria-labelledby="h-5">
-          <h2 id="h-5">5. Coberturas</h2>
+          <h1 id="h-5">5. Coberturas</h1>
           <p class="meta">
             Información rápida sobre obras sociales, prepagas y atención particular.
           </p>
@@ -1159,7 +1165,7 @@
 
         <!-- 6. Resultados e informes online -->
         <section id="a-6" aria-labelledby="h-6">
-          <h2 id="h-6">6. Resultados e informes online</h2>
+          <h1 id="h-6">6. Resultados e informes online</h1>
           <p class="meta">
             Acceso digital a estudios e informes, sin necesidad de retirar todo en papel.
           </p>
@@ -1239,7 +1245,7 @@
 
         <!-- 7. Preguntas frecuentes -->
         <section id="a-7" aria-labelledby="h-7">
-          <h2 id="h-7">7. Preguntas frecuentes</h2>
+          <h1 id="h-7">7. Preguntas frecuentes</h1>
           <p class="meta">
             Respuestas rápidas a las dudas más comunes. Para el detalle completo, se mantiene una página específica de FAQ.
           </p>
@@ -1316,7 +1322,7 @@
 
         <!-- 8. Contacto y ayuda -->
         <section id="a-8" aria-labelledby="h-8">
-          <h2 id="h-8">8. Contacto y ayuda</h2>
+          <h1 id="h-8">8. Contacto y ayuda</h1>
           <p class="meta">
             Canales de comunicación para coordinar turnos, resolver dudas y recibir orientación.
           </p>
@@ -1417,7 +1423,7 @@
     </div>
   </div>
 
-  <a href="#indice" class="to-top" aria-label="Volver al índice">📑</a>
+  <a href="#inicio" class="to-top" aria-label="Volver arriba">↑</a>
 
 </body>
 </html>
