@@ -327,106 +327,6 @@
       text-decoration:none;
     }
 
-    /* ============ Cards de ubicación ============ */
-    .location-card{
-      display:grid;
-      grid-template-columns:1fr;
-      gap:16px;
-      margin:16px 0;
-      padding:18px;
-      background:var(--card);
-      border:1px solid var(--line);
-      border-radius:var(--radius);
-      box-shadow:0 2px 8px rgba(0,0,0,.04);
-    }
-    @media (min-width:768px){
-      .location-card{
-        grid-template-columns:1fr 1fr;
-        gap:20px;
-      }
-    }
-    .location-map{
-      border-radius:10px;
-      overflow:hidden;
-      min-height:280px;
-      background:var(--line);
-    }
-    .location-map iframe{
-      width:100%;
-      height:100%;
-      min-height:280px;
-      border:0;
-    }
-    .location-info{
-      display:flex;
-      flex-direction:column;
-      gap:12px;
-    }
-    .location-info h4{
-      margin:0 0 4px;
-      font-size:clamp(17px,2.2vw,20px);
-      color:var(--brand);
-    }
-    .info-item{
-      display:flex;
-      gap:10px;
-      align-items:flex-start;
-    }
-    .info-icon{
-      display:inline-flex;
-      align-items:center;
-      justify-content:center;
-      width:28px;
-      height:28px;
-      min-width:28px;
-      border-radius:8px;
-      background:var(--brand);
-      color:#fff;
-      font-size:14px;
-    }
-    .info-content{
-      flex:1;
-    }
-    .info-content strong{
-      display:block;
-      margin-bottom:4px;
-      font-size:var(--fs-small);
-      text-transform:uppercase;
-      letter-spacing:.3px;
-      color:var(--muted);
-    }
-    .info-content p{
-      margin:2px 0;
-      line-height:1.5;
-    }
-    .schedule-list{
-      list-style:none;
-      margin:0;
-      padding:0;
-    }
-    .schedule-list li{
-      margin:4px 0;
-      display:flex;
-      justify-content:space-between;
-      align-items:center;
-      gap:8px;
-    }
-    .schedule-list li strong{
-      font-weight:600;
-    }
-    .badge-highlight{
-      display:inline-block;
-      background:#fff3cd;
-      color:#856404;
-      padding:2px 8px;
-      border-radius:6px;
-      font-size:11px;
-      font-weight:600;
-      text-transform:uppercase;
-      letter-spacing:.3px;
-      border:1px solid #ffeaa7;
-    }
-
     /* ============ Anclas accesibles ============ */
     [id]{scroll-margin-top:calc(var(--headerH) + 10px)}
 
@@ -729,111 +629,31 @@
             Dónde estamos y en qué horarios atendemos en cada sede.
           </p>
 
-          <!-- Sede Berazategui -->
-          <div class="location-card" id="a-4-1">
-            <div class="location-map">
-              <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3273.123456789!2d-58.2!3d-34.76!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzTCsDQ1JzM2LjAiUyA1OMKwMTInMDAuMCJX!5e0!3m2!1ses!2sar!4v1234567890"
-                allowfullscreen=""
-                loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade"
-                title="Mapa de Sede Berazategui">
-              </iframe>
-            </div>
-            <div class="location-info">
-              <h4>Sede Berazategui</h4>
-              
-              <div class="info-item">
-                <span class="info-icon">📍</span>
-                <div class="info-content">
-                  <strong>Dirección</strong>
-                  <p>Lisandro de la Torre 1342<br>Berazategui, Buenos Aires</p>
-                </div>
-              </div>
+          <h3 id="a-4-1">4.1 Sede Berazategui</h3>
+          <p>
+            Lisandro de la Torre 1342, Berazategui.
+          </p>
+          <ul>
+            <li><strong>Lunes a viernes:</strong> 07:00 a 20:00 hs</li>
+            <li><strong>Sábados:</strong> 08:00 a 13:00 hs</li>
+            <li><strong>Domingos (guardia):</strong> 16:00 a 20:00 hs</li>
+          </ul>
+          <p>
+            Podés consultar cómo llegar y opciones de transporte al momento de coordinar el turno.
+          </p>
 
-              <div class="info-item">
-                <span class="info-icon">🕐</span>
-                <div class="info-content">
-                  <strong>Horarios</strong>
-                  <ul class="schedule-list">
-                    <li>
-                      <span><strong>Lunes a viernes:</strong></span>
-                      <span>07:00 a 20:00 hs</span>
-                    </li>
-                    <li>
-                      <span><strong>Sábados:</strong></span>
-                      <span>08:00 a 13:00 hs</span>
-                    </li>
-                    <li>
-                      <span><strong>Domingos:</strong></span>
-                      <span>16:00 a 20:00 hs <span class="badge-highlight">Guardia</span></span>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-
-              <div class="info-item">
-                <span class="info-icon">ℹ️</span>
-                <div class="info-content">
-                  <strong>Transporte</strong>
-                  <p>Podés consultar cómo llegar y opciones de transporte al momento de coordinar el turno.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Sede Lomas de Zamora -->
-          <div class="location-card" id="a-4-2">
-            <div class="location-map">
-              <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3277.123456789!2d-58.4!3d-34.76!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzTCsDQ1JzM2LjAiUyA1OMKwMjQnMDAuMCJX!5e0!3m2!1ses!2sar!4v1234567890"
-                allowfullscreen=""
-                loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade"
-                title="Mapa de Sede Lomas de Zamora">
-              </iframe>
-            </div>
-            <div class="location-info">
-              <h4>Sede Lomas de Zamora</h4>
-              
-              <div class="info-item">
-                <span class="info-icon">📍</span>
-                <div class="info-content">
-                  <strong>Dirección</strong>
-                  <p>Av. Mitre 456<br>Lomas de Zamora, Buenos Aires</p>
-                </div>
-              </div>
-
-              <div class="info-item">
-                <span class="info-icon">🕐</span>
-                <div class="info-content">
-                  <strong>Horarios</strong>
-                  <ul class="schedule-list">
-                    <li>
-                      <span><strong>Lunes a viernes:</strong></span>
-                      <span>07:00 a 20:00 hs</span>
-                    </li>
-                    <li>
-                      <span><strong>Sábados:</strong></span>
-                      <span>08:00 a 13:00 hs</span>
-                    </li>
-                    <li>
-                      <span><strong>Domingos:</strong></span>
-                      <span>Consultar disponibilidad</span>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-
-              <div class="info-item">
-                <span class="info-icon">ℹ️</span>
-                <div class="info-content">
-                  <strong>Transporte</strong>
-                  <p>Para indicaciones de acceso y transporte público podés escribir por WhatsApp o llamar a la sede.</p>
-                </div>
-              </div>
-            </div>
-          </div>
+          <h3 id="a-4-2">4.2 Sede Lomas de Zamora</h3>
+          <p>
+            Av. Mitre 456, Lomas de Zamora.
+          </p>
+          <ul>
+            <li><strong>Lunes a viernes:</strong> 07:00 a 20:00 hs</li>
+            <li><strong>Sábados:</strong> 08:00 a 13:00 hs</li>
+            <li><strong>Domingos:</strong> consultar guardia y disponibilidad.</li>
+          </ul>
+          <p>
+            Para indicaciones de acceso y transporte público podés escribir por WhatsApp o llamar a la sede.
+          </p>
         </section>
 
         <!-- 5. Coberturas -->
